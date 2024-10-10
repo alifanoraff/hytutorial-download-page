@@ -1,239 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Unduh Hytutorial Apps</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-                 font-family: 'Poppins', sans-serif;
-                 background-color: #f5f5f5;
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
-             }
-             .container {
-                 background-color: white;
-                 border-radius: 10px;
-                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                 padding: 20px;
-                 max-width: 400px;
-             }
-             .header {
-                 display: flex;
-                 align-items: center;
-                 margin-bottom: 20px;
-             }
-             .header img {
-                 width: 50px;
-                 height: 50px;
-                 border-radius: 5px;
-                 margin-right: 10px;
-             }
-             .header .title {
-                 font-size: 20px;
-                 font-weight: bold;
-                 padding-bottom: 5px;
-             }
-             .header .subtitle {
-                 font-size: 14px;
-                 color: #888;
-                 padding-bottom: 5px;
-             }
-             .header .company {
-                 font-size: 12px;
-                 color: #007bff;
-                 padding-bottom: 5px;
-             }
-             .download-button {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                min-height: 25px;
-                background-color: #007bff;
-                color: white;
-                text-align: center;
-                padding: 10px;
-                border-radius: 5px;
-                text-decoration: none;
-                margin-bottom: 20px;
-                font-weight: 600;
-                position: relative;
-             }
-             .content {
-                 font-size: 14px;
-                 color: #333;
-             }
-             .content ol {
-                 padding-left: 20px;
-             }
-             .content ol li {
-                 margin-bottom: 10px;
-             }
-             .content .note {
-                 font-weight: bold;
-                 margin-top: 20px;
-             }
-             .spinner {
-                display: none;
-                position: absolute;
-                /* top: 50%;
-                left: 50%; */
-                transform: translate(-50%, -50%);
-                border: 4px solid rgba(255, 255, 255, 0.3);
-                border-radius: 50%;
-                border-top: 4px solid white;
-                width: 20px;
-                height: 20px;
-                -webkit-animation: spin 1s linear infinite;
-                animation: spin 1s linear infinite;
-            }
-            @-webkit-keyframes spin {
-                0% { -webkit-transform: rotate(0deg); }
-                100% { -webkit-transform: rotate(360deg); }
-            }
-            @keyframes spin {
-                0% { transform: rotate(0deg); }
-                100% { transform: rotate(360deg); }
-            }
-       </style>
-</head>
-<body>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 400px;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      .header .title {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 5px;
+      }
+      .header .subtitle {
+        font-size: 14px;
+        color: #888;
+        padding-bottom: 5px;
+      }
+      .header .company {
+        font-size: 12px;
+        color: #007bff;
+        padding-bottom: 5px;
+      }
+      .download-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 25px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-radius: 50px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        font-weight: 600;
+        position: relative;
+      }
+      .content {
+        font-size: 14px;
+        color: #333;
+      }
+      .content ol {
+        padding-left: 20px;
+      }
+      .content ol li {
+        margin-bottom: 10px;
+      }
+      .content .note {
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .spinner {
+        display: none;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top: 4px solid white;
+        width: 20px;
+        height: 20px;
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+      }
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .slider-container {
+        width: 100%;
+        max-width: 1200px;
+        overflow: hidden;
+        position: relative;
+      }
+      .slider {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+      }
+      .card {
+        flex: 0 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 5px;
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .arrow-left {
+        left: 10px;
+      }
+      .arrow-right {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-     <div class="header">
-        <img alt="app logo" style="width: 100px; height: 100px; object-fit: cover; box-shadow: 5px 5px 5px #888; border-radius: 25px;" src="./images/apps-icon.png" />
-        <div style="padding-left: 8px;">
-            <div class="title">
-                HyTutorial
-            </div>
-            <div class="subtitle">
-                Hydro Turbine Alignment Apps
-            </div>
-            <div class="company">
-                PT PLN NUSANTARA POWER (UP BRANTAS)
-            </div>
+      <div class="header">
+        <img
+          alt="app logo"
+          style="
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            box-shadow: 5px 5px 5px #888;
+            border-radius: 25px;
+          "
+          src="./images/apps-icon.png"
+        />
+        <div style="padding-left: 8px">
+          <div class="title">HyTutorial</div>
+          <div class="subtitle">Hydro Turbine Rotor Alignment</div>
+          <div class="company">PT PLN NUSANTARA POWER (UP BRANTAS)</div>
         </div>
-    </div>
-    <div style="padding-right: 15px;">
-        <a class="download-button" href="https://hydroturbinealignment.id/download/do" id="downloadButton">
-    <span id="buttonText">Download</span>
-    <div class="spinner" id="spinner"></div>
-   </a>
-    </div>
-     <div class="content">
-      <p style="font-size: 16px; font-weight: 600; text-decoration: underline;">
-       Panduan Instalasi
-      </p>
-      <ol>
-       <li>
-        Aktifkan Opsi "Install unknown Apps" (Aplikasi dari Sumber Tidak Dikenal)
-        <ul>
-         <li>
-          Masuk ke Pengaturan di perangkat Android Anda
-         </li>
-         <li>
-          Pilih Keamanan atau Privasi &amp; Keamanan (bergantung model perangkat)
-         </li>
-         <li>
-          Cari opsi Sumber Tidak Dikenal atau Install Unknown Apps
-         </li>
-         <li>
-          Pilih Chrome dari daftar aplikasi yang ada, aktifkan izin untuk mengizinkan instalasi dari sumber tidak dikenal.
-         </li>
-        </ul>
-       </li>
-       <li>
-        Unduh File APK
-        <ul>
-         <li>
-          Buka Google Chrome di perangkat Android Anda
-         </li>
-         <li>
-          Cari dan unduh file APK yang Anda inginkan dari situs web terpercaya. Setelah selesai mengunduh, Anda akan melihat pemberitahuan di bagian bawah layar atau di aplikasi File Manager.
-         </li>
-        </ul>
-       </li>
-       <li>
-        Instalasi APK
-        <ul>
-         <li>
-          Buka file APK yang telah diunduh di menu notifikasi atau buka folder Unduhan pada perangkat Anda menggunakan File Manager.
-         </li>
-         <li>
-          Ketuk file APK untuk memulai proses instalasi.
-         </li>
-         <li>
-          Jika Anda mendapatkan peringatan keamanan, ketuk Lanjutkan atau Instal untuk melanjutkan.
-         </li>
-         <li>
-          Tunggu beberapa saat hingga proses instalasi selesai.
-         </li>
-        </ul>
-       </li>
-       <li>
-        Selesai
-        <ul>
-         <li>
-          Setelah instalasi selesai, Anda dapat membuka aplikasi yang telah diinstal dengan menekan tombol Buka, mengakses dari layar utama atau menu aplikasi Anda.
-         </li>
-        </ul>
-       </li>
-      </ol>
-      <p class="note">
-       Catatan Penting:
-      </p>
-      <ol>
-       <li>
-        Pastikan Anda mengunduh file APK hanya dari sumber terpercaya untuk menghindari malware atau aplikasi berbahaya.
-       </li>
-       <li>
-        Setelah instalasi selesai, Anda bisa menonaktifkan kembali opsi instalasi dari sumber tidak dikenal.
-       </li>
-      </ol>
-      <p>
-       Jika Anda masih membutuhkan informasi, jangan ragu untuk bertanya kepada admin!
-      </p>
-     </div>
+      </div>
+      <div style="padding-right: 15px">
+        <a class="download-button" href="#" id="downloadBttn">
+          <span id="buttonText">Download</span>
+          <div class="spinner" id="spinner"></div>
+        </a>
+      </div>
+
+      <div class="slider-container">
+        <div class="slider">
+          <div class="card">
+            <img
+              alt="Take care of Pou!"
+              height="200"
+              src="./images/default-section.jpg"
+            />
+          </div>
+          <div class="card">
+            <img
+              alt="Play many games!"
+              height="200"
+              src="./images/login-page.jpg"
+            />
+          </div>
+          <div class="card">
+            <img
+              alt="Personalize!"
+              height="200"
+              src="./images/add-data-page.jpg"
+            />
+          </div>
+          <div class="card">
+            <img
+              alt="Go outside!"
+              height="200"
+              src="./images/result-section.jpg"
+            />
+          </div>
+        </div>
+        <button class="arrow arrow-left" onclick="prevSlide()">❮</button>
+        <button class="arrow arrow-right" onclick="nextSlide()">❯</button>
+      </div>
+
+      <div class="content">
+        <div class="content">
+          <p
+            style="
+              font-size: 16px;
+              font-weight: 600;
+              text-decoration: underline;
+            "
+          >
+            Tentang Aplikasi
+          </p>
+          <p>
+            Hytutorial adalah solusi yang andal dan efektif untuk pemantauan
+            kebengkokan poros pada turbin hidro. Dengan fitur-fitur canggih yang
+            mudah digunakan, aplikasi ini membantu pengguna dalam menjaga
+            kondisi optimal poros turbin, meningkatkan efisiensi operasional,
+            dan mencegah kerusakan yang tidak diinginkan.
+          </p>
+        </div>
+        <p
+          style="font-size: 16px; font-weight: 600; text-decoration: underline"
+        >
+          Panduan Instalasi
+        </p>
+        <ol>
+          <li>
+            Aktifkan Opsi "Install unknown Apps" (Aplikasi dari Sumber Tidak
+            Dikenal)
+            <ul>
+              <li>Masuk ke Pengaturan di perangkat Android Anda</li>
+              <li>
+                Pilih Keamanan atau Privasi &amp; Keamanan (bergantung model
+                perangkat)
+              </li>
+              <li>Cari opsi Sumber Tidak Dikenal atau Install Unknown Apps</li>
+              <li>
+                Pilih Chrome dari daftar aplikasi yang ada, aktifkan izin untuk
+                mengizinkan instalasi dari sumber tidak dikenal.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Unduh File APK
+            <ul>
+              <li>Buka Google Chrome di perangkat Android Anda</li>
+              <li>
+                Cari dan unduh file APK yang Anda inginkan dari situs web
+                terpercaya. Setelah selesai mengunduh, Anda akan melihat
+                pemberitahuan di bagian bawah layar atau di aplikasi File
+                Manager.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Instalasi APK
+            <ul>
+              <li>
+                Buka file APK yang telah diunduh di menu notifikasi atau buka
+                folder Unduhan pada perangkat Anda menggunakan File Manager.
+              </li>
+              <li>Ketuk file APK untuk memulai proses instalasi.</li>
+              <li>
+                Jika Anda mendapatkan peringatan keamanan, ketuk Lanjutkan atau
+                Instal untuk melanjutkan.
+              </li>
+              <li>Tunggu beberapa saat hingga proses instalasi selesai.</li>
+            </ul>
+          </li>
+          <li>
+            Selesai
+            <ul>
+              <li>
+                Setelah instalasi selesai, Anda dapat membuka aplikasi yang
+                telah diinstal dengan menekan tombol Buka, mengakses dari layar
+                utama atau menu aplikasi Anda.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p class="note">Catatan Penting:</p>
+        <ol>
+          <li>
+            Pastikan Anda mengunduh file APK hanya dari sumber terpercaya untuk
+            menghindari malware atau aplikasi berbahaya.
+          </li>
+          <li>
+            Setelah instalasi selesai, Anda bisa menonaktifkan kembali opsi
+            instalasi dari sumber tidak dikenal.
+          </li>
+        </ol>
+        <p>
+          Jika Anda masih membutuhkan informasi, jangan ragu untuk bertanya
+          kepada admin!
+        </p>
+      </div>
     </div>
     <script>
-        document.getElementById('downloadBttn').addEventListener('click', function(event) {
-            event.preventDefault();
-            var spinner = document.getElementById('spinner');
-            var buttonText = document.getElementById('buttonText');
-            buttonText.style.display = 'none';
-            spinner.style.display = 'block';
-    
-            fetch('https://hydroturbinealignment.id/download/do')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.blob();
-                })
-                .then(blob => {
-                    var url = window.URL.createObjectURL(blob);
-                    var a = document.createElement('a');
-                    a.style.display = 'none';
-                    a.href = url;
-                    a.download = 'hytutorial.apk';
-                    document.body.appendChild(a);
-                    a.click();
-                    window.URL.revokeObjectURL(url);
-                    spinner.style.display = 'none';
-                    buttonText.style.display = 'block';
-                    alert('Download complete!');
-                })
-                .catch(() => {
-                    spinner.style.display = 'none';
-                    buttonText.style.display = 'block';
-                    alert('Download failed!');
-                });
+      document
+        .getElementById("downloadBttn")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          var spinner = document.getElementById("spinner");
+          var buttonText = document.getElementById("buttonText");
+          buttonText.style.display = "none";
+          spinner.style.display = "block";
+
+          fetch("https://hydroturbinealignment.id/download/do")
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.blob();
+            })
+            .then((blob) => {
+              var url = window.URL.createObjectURL(blob);
+              var a = document.createElement("a");
+              a.style.display = "none";
+              a.href = url;
+              a.download = "hytutorial.apk";
+              document.body.appendChild(a);
+              a.click();
+              window.URL.revokeObjectURL(url);
+              spinner.style.display = "none";
+              buttonText.style.display = "block";
+              alert("Download complete!");
+            })
+            .catch(() => {
+              spinner.style.display = "none";
+              buttonText.style.display = "block";
+              alert("Download failed!");
+            });
         });
-      </script>
-   </body>
+
+      let currentIndex = 0;
+      const slider = document.querySelector(".slider");
+      const slides = document.querySelectorAll(".card");
+      let slidesToShow = 1;
+
+      function updateSliderPosition() {
+        const slideWidth = slider.clientWidth / slidesToShow;
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+
+      function updateSlidesToShow() {
+        const containerWidth =
+          document.querySelector(".slider-container").clientWidth;
+        if (containerWidth >= 1200) {
+          slidesToShow = 5;
+        } else if (containerWidth >= 600) {
+          slidesToShow = 4;
+        } else if (containerWidth >= 300) {
+          slidesToShow = 3;
+        } else {
+          slidesToShow = 1;
+        }
+        slides.forEach((slide) => {
+          slide.style.width = `${100 / slidesToShow}%`;
+        });
+        updateSliderPosition();
+      }
+
+      function nextSlide() {
+        if (currentIndex < slides.length - slidesToShow) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSliderPosition();
+      }
+
+      function prevSlide() {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = slides.length - slidesToShow;
+        }
+        updateSliderPosition();
+      }
+
+      let startX;
+      let isDragging = false;
+
+      slider.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+      });
+
+      slider.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+        const currentX = e.touches[0].clientX;
+        const diffX = startX - currentX;
+        if (diffX > 50) {
+          nextSlide();
+          isDragging = false;
+        } else if (diffX < -50) {
+          prevSlide();
+          isDragging = false;
+        }
+      });
+
+      slider.addEventListener("touchend", () => {
+        isDragging = false;
+      });
+
+      window.addEventListener("resize", updateSlidesToShow);
+      updateSlidesToShow();
+    </script>
+  </body>
 </html>
